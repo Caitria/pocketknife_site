@@ -1,8 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+// -*- indent-tabs-mode: nil, tab-width: 4 -*-
 // @import "compass/reset";
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400|Open+Sans:400,300,700|Raleway");
 
@@ -21,6 +17,12 @@ $primary-color: #F35757;
 /* Text Rendering */
 $base-font-size: 100%; /* 16px most browsers */
 $base-line-height: 150%;
+$section-header-spacing: 0.5em;
+
+/* Mixins */
+@mixin centered-mixin {
+  margin: 0 auto;
+}
 
 
 /* Decoration */
@@ -49,7 +51,7 @@ br {
 }
 
 #col-left {
-	width: 300px; 
+	width: 300px;
 	padding: .75em;
 
 }
@@ -64,22 +66,25 @@ br {
 	overflow-y: auto;
 }
 
-.logo {
+#logo {
 	h1 {
 		font-family: $body-accent-font;
 		font-weight: 300;
 		text-align: center;
 		font-size: 2.5em;
-		line-height: 2;
+		// line-height: 2;
 	}
 	img {
-		padding: $padded;
-		margin-left: 10px;
+		// padding: $padded;
 		margin-bottom: 10px;
 	}
 }
 
-.logo-footer {
+#logo-image {
+  width: 200px;
+}
+
+#logo-footer {
 	background: $primary-color;
 	border-top-style: solid;
 	border-width: 1px;
@@ -93,6 +98,10 @@ br {
 	}
 }
 
+#logo-hero {
+	margin-bottom: 20px;
+}
+
 .bordered {
 	border-style: solid;
 	border-width: 1px;
@@ -102,23 +111,29 @@ br {
 	padding: 12px;
 }
 
-.hero {
-	margin-bottom: 20px;
+.centered {
+  @include centered-mixin;
 }
 
-.logo-hero {
+.no-bullet {
+  list-style-type: none;
+}
+
+.hero {
 	margin-bottom: 20px;
 }
 
 .section {
 	h1 {
 		text-align: center;
-		line-height: 1.4;
-		padding-bottom: 4px;
+                margin: 0 $section-header-spacing;
 	}
 	h2 {
-		line-height: 2;
+                margin-top: $section-header-spacing;
 	}
+        p {
+          padding: 0 1em;
+        }
 }
 
 
@@ -149,8 +164,9 @@ br {
 	margin-top: 40px;
 	ul {
 		font-family: $body-header-font;
-		font-size: 2.15em;
+		font-size: 2em;
 		font-weight: 700;
+                text-align: right;
 	}
 }
 
