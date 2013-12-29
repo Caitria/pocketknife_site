@@ -1,0 +1,328 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400|Open+Sans:400,300,700|Raleway");
+
+
+/* Global Styles */
+$body-bg: #555555;
+$body-font-color: #222;
+$body-font-family: "Open Sans";
+$body-header-font: "Alegreya Sans SC";
+$body-accent-font: "Raleway";
+$padded: 12px;
+
+/* Color Palette */
+$primary-color: #F35757;
+
+/* Text Rendering */
+$base-font-size: 100%; /* 16px most browsers */
+$base-line-height: 150%;
+
+
+/* Decoration */
+
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+
+
+/* Site SCSS */
+
+body {
+	color: $body-font-color;
+	font-family: $body-font-family;
+}
+
+br {
+	height: 20px;
+}
+
+#page {
+	margin: 20px;
+}
+
+#col-left {
+	width: 300px; 
+	padding: .75em;
+
+}
+
+#col-right {
+	position: fixed;
+	left: 400px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 2em;
+	overflow-y: auto;
+}
+
+.logo {
+	h1 {
+		font-family: $body-accent-font;
+		font-weight: 300;
+		text-align: center;
+		font-size: 2.5em;
+		line-height: 2;
+	}
+	img {
+		padding: $padded;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.logo-footer {
+	background: $primary-color;
+	border-top-style: solid;
+	border-width: 1px;
+	padding: 5px 0 5px 0;
+	p {
+		text-align: center;
+		font-size: 1.1em;
+		font-weight: 400;
+		line-height: .55;
+		margin-top: 10px;
+	}
+}
+
+.bordered {
+	border-style: solid;
+	border-width: 1px;
+}
+
+.padded {
+	padding: 12px;
+}
+
+.hero {
+	margin-bottom: 20px;
+}
+
+.logo-hero {
+	margin-bottom: 20px;
+}
+
+.section {
+	h1 {
+		text-align: center;
+		line-height: 1.4;
+		padding-bottom: 4px;
+	}
+	h2 {
+		line-height: 2;
+	}
+}
+
+
+.process {
+	img {
+	padding-left: 5%;
+	padding-right: 5%;
+	height: 160px;
+	}
+	h2 {
+		text-align: left;
+	}
+}
+
+#bios {
+	img {
+		height: 160px;
+		float: right;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	h2 {
+		text-align: left;
+	}
+}
+
+.nav {
+	margin-top: 40px;
+	ul {
+		font-family: $body-header-font;
+		font-size: 2.15em;
+		font-weight: 700;
+	}
+}
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1400px) {
+	/* side by side columns and add fixed bottom image, remove lines images */
+}
+
+@media screen and (min-width: 1001px) {
+	/* side by side columns, side nav -- default*/
+	.small-nav {
+		display: none;
+	}
+
+	.container-small {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	/* switch to one column, switch to sticky nav, shrink headers, reduce page margins, add padding above left column*/
+	//reduce page margins
+	#page {
+		margin: 5px;
+	}
+
+	//shrink headers
+	.section {
+		h1 {
+			font-size: 2.2em;
+		}
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+
+	//shrink images
+	.section {
+		img {
+			height: 120px;
+		}
+	}
+	//switch to one column, add padding above logo in #col-left
+	#col-left {
+		top: 55px;
+		position: relative;
+		margin: auto;
+		padding-bottom: 30px;
+		background-image: url("img/sm-bck.svg");
+	}
+
+	#col-right {
+		left: 0;
+		position: relative;
+	}
+
+	//switch to sticky nav
+
+	.nav {
+		display: none;
+	}
+	.small-nav {
+		position: fixed;
+		z-index: 200;
+		background-color: #fff;
+		width: 100%;
+		height: 50px;
+		top: 0;
+		right: 0;
+		left: 0;
+		text-align: center;
+
+		ul {
+			font-family: $body-header-font;
+			font-size: 1.2em;
+			font-weight: 700;
+			padding-top: 20px;
+			}
+		li {
+			display: inline;
+			list-style-type: none;
+			padding: 15px;
+
+			}
+		}
+
+
+	.container-small {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	/* shrink header sizes - remove borders, shrink images*/
+
+	//remove borders
+	.section {
+		border: none;
+	}
+	.hero {
+		border: none;
+	}
+
+	//shrink header sizes
+	.section {
+		h1 {
+			font-size: 1.85em;
+		}
+	}
+
+	.small-nav {
+		ul {
+			font-size: 1em;
+			}
+		li {
+			padding-right: 2px;
+		}
+	}
+
+	.img-container-big{
+		display: none;
+	}
+
+	.container-small {
+		display: block;
+	}
+
+
+}
+
+/* Typography */
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+	line-height: inherit;
+	a:hover, a:focus {
+		color: #f13f3f;
+	}
+}
+p {
+	font-family: $body-font-family;
+	font-weight: 300;
+	font-size: 1.15em;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	text-align: justify;
+	strong {
+		font-weight: 700;
+	}
+}
+
+h1 {
+	font-family: $body-header-font;
+	font-size: 3em;
+}
+
+h2 {
+	font-family: $body-header-font;
+	font-size: 1.6875em;
+	text-align: center;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!-- -*- tab-width: 2 -*- -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	{% include head.html %}
+
+	<body>
+		<div id="page">
+			<div class="small-nav">
+				<ul class="no-bullet">
+					<li><a href="/">Home</a></li>
+					<li><a href="/portfolio">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div><!-- /end.small-nav -->
+
+			<div id="col-left">
+				<div class="logo-hero bordered padded">
+					<div class="logo bordered">
+						<h1>Pocketknife</h1>
+						{% image pocketknife.svg %}
+						<div class="logo-footer">
+							<p> design &#183 prototyping </p>
+							<p> engineering </p>
+						</div><!-- /end.logo-footer -->
+					</div><!-- /end.logo -->
+				</div><!-- /end.logo-hero -->
+				<div class="section nav">
+					<ul class="no-bullet">
+						<li><a href="/"> Home </a></li>
+						<li><a href="/portfolio"> Portfolio</a></li>
+						<li><a href="#"> Blog </a></li>
+						<li><a href="#"> Contact </a></li>
+					</ul>
+				</div><!-- /end.section -->
+			</div><!-- /end.left -->
+
+			<div id="col-right">
+				<!-- begin.content -->
+				{{ content }}
+				<!-- /end.content -->
+		</div><!-- /end.page -->
+	</body>
+</html>
