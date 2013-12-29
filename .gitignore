@@ -1,8 +1,6 @@
 _site/
 _vendor/
-
+_assets/stylesheets/.sass-cache/
 .bundle/install.log
-
 s3_website.yml
-
 .DS_Store
