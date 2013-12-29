@@ -26,3 +26,17 @@ That is all.
 # run to compile, watch for changes, serve, and make you a sandwich
 bundle exec jekyll serve --watch
 ```
+
+
+## Pushing to S3
+
+Perhaps not the best decision, but `bundle install` will install the
+`s3_website` gem. This can be used to push the website to S3, given
+that you have the correct s3_website.yml file.
+
+To push:
+
+```bash
+# run this from the repo base directory
+bundle exec s3_website push
+```
