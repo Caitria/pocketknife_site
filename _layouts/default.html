@@ -1,46 +1,61 @@
 <!-- -*- tab-width: 2 -*- -->
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-	{% include head.html %}
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=320" />
+    <title>Pocketknife</title>
+    {% stylesheet screen %}
+  </head>
 
-	<body>
-		<div id="page">
-			<div class="small-nav">
-				<ul class="no-bullet">
-					<li><a href="/">Home</a></li>
-					<li><a href="/portfolio">Portfolio</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div><!-- /end.small-nav -->
+  <body>
+    <div id="page">
+      <div class="small-nav">
+        <ul class="no-bullet">
+          <li><a href="/">Home</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div><!-- /end.small-nav -->
 
-			<div id="col-left">
-				<div id="logo-hero" class="bordered padded">
-					<div id="logo" class="bordered">
-						<h1>Pocketknife</h1>
-						<div id="logo-image" class="centered">
-							{% image pocketknife.svg %}
-						</div><!-- /end.logo-image -->
-						<div id="logo-footer">
-							<p> design &#183 prototyping </p>
-							<p> engineering </p>
-						</div><!-- /end.logo-footer -->
-					</div><!-- /end.logo -->
-				</div><!-- /end.logo-hero -->
-				<div class="section nav">
-					<ul class="no-bullet">
-						<li><a href="/"> Home </a></li>
-						<li><a href="/portfolio"> Portfolio</a></li>
-						<li><a href="#"> Blog </a></li>
-						<li><a href="#"> Contact </a></li>
-					</ul>
-				</div><!-- /end.section -->
-			</div><!-- /end.left -->
+      <div id="col-left">
+        <div id="logo-hero" class="bordered padded">
+          <div id="logo" class="bordered">
+            <h1>Pocketknife</h1>
+            <div id="logo-image" class="centered">
+              {% image pocketknife.svg %}
+            </div><!-- /end.logo-image -->
+            <div id="logo-footer">
+              <p> design &#183 prototyping </p>
+              <p> engineering </p>
+            </div><!-- /end.logo-footer -->
+          </div><!-- /end.logo -->
+        </div><!-- /end.logo-hero -->
+        <div class="section nav">
+          <ul class="no-bullet">
+            <li><a href="/"> Home </a></li>
+            <li><a href="/portfolio"> Portfolio</a></li>
+            <li><a href="#"> Blog </a></li>
+            <li><a href="#"> Contact </a></li>
+          </ul>
+        </div><!-- /end.section -->
+      </div><!-- /end.left -->
 
-			<div id="col-right">
-				<!-- begin.content -->
-				{{ content }}
-				<!-- /end.content -->
-		</div><!-- /end.page -->
-	</body>
+      <div id="col-right">
+        <!-- begin.content -->
+        {{ content }}
+        <!-- /end.content -->
+			</div><!-- /end.col-right -->
+    </div><!-- /end.page -->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script>
+		 $('a').click(function(){
+       $('#col-right').animate({
+         scrollTop: $( $.attr(this, 'href') ).offset().top
+       }, 500);
+       return false;
+     });
+    </script>
+  </body>
 </html>

@@ -5,93 +5,120 @@ title: Pocketknife
 
 <!-- -*- tab-width: 2 -*- -->
 <div class="hero bordered padded">
-	<div class="section bordered padded">
-		<h1>Design &#183 Prototyping &#183 Engineering</h1>
-		<h2 class="sub">Not Your Average Engineers</h2>
-		<p>
-			We don't just build things, we solve human
-			problems. We're <a href="#bios">Thomas and
-			Caitria</a>, a front-end/back-end contract team that
-			builds beautiful experiences for web and mobile. We're
-			perfect for your research, design and engineering
-			projects.
-		</p>
-	</div><!-- /end.section -->
+  <div class="section bordered padded">
+    <h1>Design &#183 Prototyping &#183 Engineering</h1>
+    <h2 class="sub">Not Your Average Engineers</h2>
+    <p>
+      We don't just build things, we solve human
+      problems. We're <a href="#bios">Thomas and
+      Caitria</a>, a front-end/back-end contract team that
+      builds beautiful experiences for web and mobile. We're
+      perfect for your <a href="#process">research, design
+      and engineering projects</a>.
+    </p>
+  </div><!-- /end.section -->
 </div><!-- /end.hero -->
 <div class="img-container-big">
-	<img src={% asset_path lines3.svg %} width="100%" style="margin-top: 5%; margin-bottom: 5%;">
+  <img src={% asset_path lines3.svg %} width="100%" style="margin-top: 5%; margin-bottom: 5%;">
 </div><!-- /end.img-container -->
 <div class="container-small">
-	<hr>
+  <hr>
 </div><!-- /end.container-small -->
 <div class="hero bordered padded">
-	<div class="section process bordered padded">
-		<h1>Design Process</h1>
-		<p>
-			Let's work together! Here's a look at our design and engineering
-			processes. If you can use help in any of the following areas,
-			let's get together and discuss your goals and timeline.
-		</p>
-		<br>
-		<img src={% asset_path sweatshirt.svg %} height="148px" style="float: left;"><h2> 1. Needfinding & User Research</h2>
-		<p>
-			We use human-centered design and methods pioneered at Stanford's
-			d.school to get to know your users and the problems they face. A
-			successful research sprint culminates in a clear strategy and
-			scope for future work.
-		</p>
-		<br>
-		<img src={% asset_path skis.svg %} style="float: right;"/><h2 style="text-align: right;">2. Concept Design & Prototyping</h2>
-		<p>
-			Based upon our understanding of your business goals and user
-			needs, we quickly design and prototype solutions to work toward
-			a final set of designs for the function, architecture, and
-			visual interface of your product.
-		</p>
-		<br>
-		<img src={% asset_path skilift.svg %} height="148px" style="float: left;"><h2> 3. Engineering, Documentation & Support</h2>
-		<p>
-			We build your big idea, turning a successful prototype into a
-			functional, scalable and marketable product. Working with your
-			team, we choose technologies that make sense for the task and
-			work for your team. We document beautifully and hand off
-			smoothly.
-	</div><!-- /end.section -->
+  <div id="process" class="section bordered padded">
+    <h1>Design Process</h1>
+    <p>
+      Let's work together! Here's a look at our design and engineering
+      processes. If you can use help in any of the following areas,
+      let's get together and discuss your goals and timeline.
+    </p>
+    <br>
+    <div id="research">
+      <div class="image left">
+	{% image sweatshirt.svg %}
+      </div><!-- /end.image -->
+      <div>
+	<h2>1. Needfinding & User Research</h2>
+	<p>
+	  We use human-centered design and methods pioneered at
+	  <a href="http://dschool.stanford.edu">Stanford's d.school</a>
+	  to get to know your users and the problems they face. A
+	  successful research sprint culminates in a clear strategy and
+	  scope for future work.
+	</p>
+      </div>
+    </div><!-- /end.research -->
+    <div class="cleared"></div>
+
+    <div id="prototyping">
+      <div class="image right">
+	{% image skis.svg %}
+      </div><!-- /end.image -->
+      <div>
+	<h2>2. Concept Design & Prototyping</h2>
+	<p>
+	  Based upon our understanding of your business goals and user
+	  needs, we quickly design and prototype solutions to work toward
+	  a final set of designs for the function, architecture, and
+	  visual interface of your product.
+	</p>
+      </div>
+    </div><!-- /end.prototyping -->
+    <div class="cleared"></div>
+
+    <div id="engineering">
+      <div class="image left">
+	{% image skilift.svg %}
+      </div><!-- /end.prototyping -->
+      <div>
+	<h2>3. Engineering, Documentation & Support</h2>
+	<p>
+	  We build your big idea, turning a successful prototype into a
+	  functional, scalable and marketable product. Working with your
+	  team, we choose technologies that make sense for the task and
+	  work for your team. We document beautifully and hand off
+	  smoothly.
+	</p>
+      </div>
+    </div><!-- /end.engineering -->
+  </div><!-- /end.section -->
 </div><!-- /end.hero -->
 
 <div class="container-small">
-	<hr>
+  <hr>
 </div><!-- /end.container-small -->
 
 <div class="hero bordered padded">
-	<div id="bios" class="section bordered padded">
-		<h1>Team Pocketknife</h1>
-		<h2>CAITRIA O'NEILL</h2>
-		<img src={% asset_path cprofile.png %} class="bordered">
-		<p>
-			is a UI and UX expert and web designer. She is currently a
-			Fellow and adjunct faculty at Stanford's Hasso Plattner
-			Institute of Design (the d.school). Before joining Pocketknife
-			she founded<a href="http://recovers.org">Recovers</a>, a community
-			disaster recovery software company. Caitria is a graduate of
-			Harvard University and her work has been featured on TED.com and
-			Fast Company. In her spare time, Caitria grows vegetables and
-			plays the viola.
-		</p>
+  <div id="bios" class="section bordered padded">
+    <h1>Team Pocketknife</h1>
+    <h2>CAITRIA O'NEILL</h2>
+    <img src={% asset_path cprofile.png %} class="bordered">
+    <p>
+      is a UI and UX expert and web designer. She is currently a
+      Fellow and adjunct faculty at Stanford's Hasso Plattner
+      Institute of Design (the <a href="http://dschool.stanford.edu">d.school</a>).
+      Before joining Pocketknife
+      she founded <a href="http://recovers.org">Recovers</a>, a community
+      disaster recovery software company. Caitria is a graduate of
+      Harvard University and her work has been featured on <a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CDMQtwIwAA&url=http%3A%2F%2Fwww.ted.com%2Ftalks%2Fcaitria_and_morgan_o_neill_how_to_step_up_in_the_face_of_disaster.html&ei=Uqe_UoGzHMv7oASdqIKgAQ&usg=AFQjCNGLdheUPDbQqxjbBF3t8ml0wQVlxg&sig2=lThFaNfyDMcRF9cwtE1P9g&bvm=bv.58187178,d.cGU">TED.com</a>
+      and
+      <a href="http://www.fastcompany.com/3014806/recoversorg-is-making-donations-more-efficient">Fast Company</a>. In her spare time, Caitria grows vegetables and
+      plays the viola.
+    </p>
 
-		<h2>THOMAS MOULIA</h2>
-		<img src={% asset_path tprofile.png %} class="bordered">
-		<p>
-			is a full-stack software engineer and systems architect. After
-			graduating from MIT, he performed alzheimers research at Mass
-			General Hospital and created microscopy and genetic
-			visualization software for the Albers Lab. Before joining
-			Pocketknife, Thomas worked as lead backend engineer
-			at<a href="http://osito.com">Osito</a>, an intelligent
-			assistant app for iPhone. In his spare time, Thomas rock climbs
-			and reads science fiction from the 80's.
-		</p>
-	</div><!-- /end.section -->
+    <h2>THOMAS MOULIA</h2>
+    <img src={% asset_path tprofile.png %} class="bordered">
+    <p>
+      is a full-stack software engineer and systems architect. After
+      graduating from Cambridge and MIT, he researched Alzheimer's
+      at the Mass General Hospital and created microscopy and genetic
+      visualization software for the
+      <a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CC4QFjAA&url=http%3A%2F%2Fwww.massgeneral.org%2Fresearch%2Fresearchlab.aspx%3Fid%3D1175&ei=laW_UvZfyPOgBPTegYAC&usg=AFQjCNGEIlnyQyawkgrHJYf8Wo9x39YVkg&sig2=d_eNZfGT1cWPKmblrKxw6Q&bvm=bv.58187178,d.cGU">Albers Lab</a>.
+      Before joining Pocketknife, Thomas worked as lead backend engineer
+      at <a href="http://osito.com">Osito</a>, an intelligent
+      assistant app for iPhone. In his spare time, Thomas
+      <a href={% asset_path curieclimb.jpg %}>rock climbs</a>
+      and reads science fiction from the 80's.
+    </p>
+  </div><!-- /end.section -->
 </div><!-- /end.hero -->
-
-</div><!-- /end.col-right -->
