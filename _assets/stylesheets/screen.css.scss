@@ -8,8 +8,8 @@ $body-bg: #555555;
 $body-font-color: #222;
 $body-font-family: "Open Sans";
 $body-header-font: "Alegreya Sans SC";
-$body-accent-font: "Raleway";
-$padded: 12px;
+$body-accent-font: "Open Sans";
+$padded: 0.5em;
 
 /* Color Palette */
 $primary-color: #f35757;
@@ -20,7 +20,7 @@ $blue-color: #4a64a9;
 $hover-transition: 0.2s;
 
 /* Text Rendering */
-$base-font-size: 100%; /* 16px most browsers */
+$base-font-size: 1.25em; /* 16px most browsers */
 $base-line-height: 150%;
 $section-header-spacing: 0.5em;
 
@@ -76,7 +76,8 @@ br {
 	font-family: $body-accent-font;
 	font-weight: 300;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2.8em;
+	margin: 0.4em auto;
 	// line-height: 2;
     }
     img {
@@ -344,7 +345,7 @@ a:hover, a:focus {
 p {
     font-family: $body-font-family;
     font-weight: 300;
-    font-size: 1.15em;
+    font-size: $base-font-size;
     line-height: 1.5;
     margin-bottom: 1rem;
     text-align: justify;
