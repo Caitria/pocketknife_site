@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="352px" height="352px" viewBox="0 0 352 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <title>facebook_icon</title>
     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M152.974733,186.399486 L152.974733,287 L194.050927,287 L194.050927,186.399486 L228.12568,186.399486 L232.558847,147.265824 L194.050927,147.265824 C194.050927,147.265824 191.346063,115.922707 196.112638,108.279898 C200.879214,100.637089 234,103.449481 234,103.449481 L233.999999,67.9932279 C233.999999,67.9932279 183.061565,57.8345761 162.364836,83.3848314 C148.995907,99.8888643 152.974732,147.265824 152.974732,147.265824 L119,147.265824 L119,186.399486 L152.974733,186.399486 Z" id="Oval-1" stroke="#222222" stroke-width="2" sketch:type="MSShapeGroup"></path>
-        <rect id="Rectangle-1" stroke="#222222" stroke-width="3" sketch:type="MSShapeGroup" x="0" y="0" width="352" height="352"></rect>
+        <path d="M22.0223519,26.9782038 L22.0223519,42 L28.0944849,42 L28.0944849,26.9782038 L33.1316222,26.9782038 L33.7869601,21.1347157 L28.0944849,21.1347157 C28.0944849,21.1347157 27.6946354,16.4545219 28.3992596,15.3132879 C29.1038838,14.1720539 34,14.592004 34,14.592004 L33.9999999,9.29763132 C33.9999999,9.29763132 26.4699705,7.78072856 23.410454,11.595925 C21.4341775,14.0603282 22.0223518,21.1347157 22.0223518,21.1347157 L17,21.1347157 L17,26.9782038 L22.0223519,26.9782038 Z" id="Oval-1" stroke="#222222" sketch:type="MSShapeGroup"></path>
+        <rect id="Rectangle-1" stroke="#222222" stroke-width="2" sketch:type="MSShapeGroup" x="0" y="0" width="50" height="50"></rect>
     </g>
 </svg>
