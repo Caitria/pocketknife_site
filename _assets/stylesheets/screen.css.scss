@@ -1,5 +1,6 @@
 // -*- indent-tabs-mode: nil, tab-width: 4 -*-
 // @import "compass/reset";
+@import "_media-queries";
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400|Open+Sans:400,300,700|Raleway");
 
 
@@ -24,7 +25,39 @@ $base-font-size: 1.25em; /* 16px most browsers */
 $base-line-height: 150%;
 $section-header-spacing: 0.5em;
 
-/* Mixins */
+/* Media Queries */
+
+$small-screen-breakpoint: 640px;
+$medium-screen-breakpoint: 1000px;
+$large-screen-breakpoint: 1400px;
+
+@mixin small-screen-query {
+    @include max-screen($small-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin medium-screen-query {
+    @include screen($small-screen-breakpoint + 1px, $medium-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin large-screen-query {
+    @include min-screen($medium-screen-breakpoint + 1px) {
+	@content;
+    }
+}
+
+@mixin not-large-screen-query {
+    @include max-screen($medium-screen-breakpoint) {
+	@content;
+    }
+}
+
+
+/* General Mixins */
+
 @mixin centered-mixin {
     margin: 0 auto;
 }
@@ -53,12 +86,61 @@ br {
 
 #page {
     margin: 20px;
+
+    @include small-screen-query {
+	margin: 6px;
+    }
 }
 
 #col-left {
     width: 300px;
     padding: .75em;
 
+    // Center and shift the badge one-col layout
+    @include not-large-screen-query {
+	margin: 55px auto 0 auto;
+	position: initial;
+    }
+}
+
+#nav {
+    @include not-large-screen-query {
+	position: absolute;
+	z-index: 1;
+	background-color: #fff;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+
+	ul {
+	    font-family: $body-header-font;
+	    font-size: 1.2em;
+	    font-weight: 700;
+	    // Override default css
+	    padding: 0;
+	}
+
+	li {
+	    display: inline;
+	    list-style-type: none;
+	    padding: 15px;
+
+	}
+    }
+    
+
+    @include large-screen-query {
+	margin-top: 40px;
+	ul {
+	    font-family: $body-header-font;
+	    font-size: 2em;
+	    font-weight: 700;
+            text-align: right;
+	}
+    }
 }
 
 #col-right {
@@ -69,6 +151,25 @@ br {
     right: 0;
     padding: 2em;
     overflow-y: auto;
+
+    // Shift to single col
+    @include not-large-screen-query {
+	position: initial;
+    }
+
+    // Wall to wall on small screens
+    @include small-screen-query {
+	padding: 0;
+
+	.padded {
+	    padding: 0;
+	}
+
+	.bordered {
+	    border: none;
+	}
+    }
+
 }
 
 #logo {
@@ -80,6 +181,7 @@ br {
 	margin: 0.4em auto;
 	// line-height: 2;
     }
+
     img {
 	// padding: $padded;
 		margin-bottom: 10px;
@@ -114,7 +216,7 @@ br {
 }
 
 .padded {
-    padding: 12px;
+    padding: $padded;
 }
 
 .centered {
@@ -145,15 +247,26 @@ br {
     h1 {
 	text-align: center;
 	margin: 0 $section-header-spacing;
+
+	@include small-screen-query {
+ 	    font-size: 1.85em;
+	}
     }
+
     h2 {
         color: $secondary-color;
     }
+
     h2.sub {
 	margin-top: $section-header-spacing;
     }
+
     p {
         padding: 0 1em;
+
+	@include small-screen-query {
+	    padding: 0;
+	}
     }
 }
 
@@ -184,148 +297,6 @@ br {
     }
 }
 
-.nav {
-    margin-top: 40px;
-    ul {
-	font-family: $body-header-font;
-	font-size: 2em;
-	font-weight: 700;
-        text-align: right;
-    }
-}
-
-
-
-
-
-/* Media Queries */
-
-@media screen and (min-width: 1400px) {
-/* side by side columns and add fixed bottom image, remove lines images */
-}
-
-@media screen and (min-width: 1001px) {
-    /* side by side columns, side nav -- default*/
-    .small-nav {
-	display: none;
-    }
-
-    .container-small {
-	display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    /* switch to one column, switch to sticky nav, shrink headers, reduce page margins, add padding above left column*/
-    //reduce page margins
-	#page {
-	    margin: 5px;
-	}
-
-	//shrink headers
-	.section {
-	    h1 {
-		font-size: 2.2em;
-	    }
-	    h2 {
-		font-size: 1.5em;
-	    }
-	}
-
-	//shrink images
-	.section {
-	    img {
-		height: 120px;
-	    }
-	}
-	//switch to one column, add padding above logo in #col-left
-	#col-left {
-	    top: 55px;
-	    position: relative;
-	    margin: auto;
-	    padding-bottom: 30px;
-	    background-image: url("img/sm-bck.svg");
-	}
-
-	#col-right {
-	    left: 0;
-	    position: relative;
-	}
-
-	//switch to sticky nav
-
-	.nav {
-	    display: none;
-	}
-	.small-nav {
-	    position: fixed;
-	    z-index: 200;
-	    background-color: #fff;
-	    width: 100%;
-	    height: 50px;
-	    top: 0;
-	    right: 0;
-	    left: 0;
-	    text-align: center;
-
-	    ul {
-		font-family: $body-header-font;
-		font-size: 1.2em;
-		font-weight: 700;
-		padding-top: 20px;
-	    }
-	    li {
-		display: inline;
-		list-style-type: none;
-		padding: 15px;
-
-	    }
-	}
-
-
-	.container-small {
-	    display: none;
-	}
-
-}
-
-@media screen and (max-width: 600px) {
-    /* shrink header sizes - remove borders, shrink images*/
-
-    //remove borders
-	.section {
-	    border: none;
-	}
-	.hero {
-	    border: none;
-	}
-
-	//shrink header sizes
-	.section {
-	    h1 {
-		font-size: 1.85em;
-	    }
-	}
-
-	.small-nav {
-	    ul {
-		font-size: 1em;
-	    }
-	    li {
-		padding-right: 2px;
-	    }
-	}
-
-	.img-container-big {
-	    display: none;
-	}
-
-	.container-small {
-	    display: block;
-	}
-}
-
-/* Typography */
 
 a {
   color: $primary-color;
@@ -347,7 +318,7 @@ p {
     font-weight: 300;
     font-size: $base-font-size;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     text-align: justify;
     strong {
 	font-weight: 700;
