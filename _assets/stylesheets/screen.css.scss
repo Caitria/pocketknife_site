@@ -13,7 +13,7 @@ $padded: 0.5em;
 
 /* Color Palette */
 $primary-color: #f35757;
-$secondary-color: #88976d;
+$secondary-color: #9D8851;
 $blue-color: #4a64a9;
 
 /* Animations */
@@ -360,7 +360,8 @@ h1 {
 }
 
 h2 {
-    font-family: $body-header-font;
+    font-family: $body-font-family;
+    font-weight: 300;
     font-size: 1.6875em;
     text-align: center;
 }
