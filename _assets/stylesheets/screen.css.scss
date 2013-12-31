@@ -10,7 +10,10 @@ $body-font-color: #222;
 $body-font-family: "Open Sans";
 $body-header-font: "Alegreya Sans SC";
 $body-accent-font: "Open Sans";
+
 $padded: 0.5em;
+$padding-top: 2em;
+
 
 /* Color Palette */
 $primary-color: #f35757;
@@ -25,6 +28,7 @@ $base-font-size: 1.25em; /* 16px most browsers */
 $h2-font-size: 1.6875em;
 $base-line-height: 150%;
 $section-header-spacing: 0.2em;
+$top-padding: 20px;
 
 /* Viewport */
 
@@ -118,6 +122,7 @@ video {
 body {
     color: $body-font-color;
     font-family: $body-font-family;
+    margin-top: 0;
 }
 
 br {
@@ -176,7 +181,7 @@ h2 {
 // Specific ids
 
 #page {
-    margin: 20px;
+    margin: 0;
 
     @include small-screen-query {
 	margin: 6px;
@@ -185,12 +190,15 @@ h2 {
 
 #col-left {
     width: 300px;
-    padding: 0.75em;
+    padding: $padding-top;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 
     // Center and shift the badge one-col layout
     @include not-large-screen-query {
+	position: initial;
 	margin: 55px auto 0 auto;
-	// position: initial;
 	padding: 0.75em 0;
     }
 }
@@ -237,13 +245,10 @@ h2 {
 }
 
 #col-right {
-    $padding: 40px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 2em $padding $padding 400px;
+    $padding: 20px;
+
+    position: relative;
+    padding: $padding-top $padding $padding 400px;
     overflow-y: auto;
 
     // Give up scaling on oversized screens

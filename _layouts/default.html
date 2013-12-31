@@ -1,5 +1,5 @@
 <!-- -*- tab-width: 2 -*- -->
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html class="no-js" lang="en">
 
     <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
@@ -67,21 +67,18 @@
 
 			 // Smooth scrolling for internal page links
 			 var paddingOffset = 20,
-			     twoColCutoff = 1000,
-			     navHeight = 60;
+			     twoColCutoff = 1000;
+
 			 $('a').click(function(){
-				 var eltSel, offsetsOffset;
+				 var offsetsOffset;
 				 if ($('body').width() > twoColCutoff) {
 					 // Two Col
-					 eltSel = '#col-right';
 					 offsetsOffset = paddingOffset;
 				 } else {
 					 // One Col
-					 eltSel = 'body';
-					 offsetsOffset = paddingOffset + navHeight;
+					 offsetsOffset = paddingOffset + $('#nav').height();
 				 }
-				 console.log("screen: " + screen.width + ", offset: " + offsetsOffset);
-				 $(eltSel).animate({
+				 $('body').animate({
 					 scrollTop: $($.attr(this, 'href')).offset().top - offsetsOffset
 				 }, 500);
 				 return false;
