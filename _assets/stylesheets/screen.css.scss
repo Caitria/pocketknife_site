@@ -24,7 +24,7 @@ $hover-transition: 0.2s;
 $base-font-size: 1.25em; /* 16px most browsers */
 $h2-font-size: 1.6875em;
 $base-line-height: 150%;
-$section-header-spacing: 0.5em;
+$section-header-spacing: 0.2em;
 
 /* Viewport */
 
@@ -179,13 +179,13 @@ h2 {
 
 #col-left {
     width: 300px;
-    padding: .75em;
+    padding: 0.75em;
 
     // Center and shift the badge one-col layout
     @include not-large-screen-query {
 	margin: 55px auto 0 auto;
 	position: initial;
-	padding: 0;
+	padding: 0.75em 0;
     }
 }
 
@@ -318,6 +318,15 @@ h2 {
 
 #process {
     text-align: center;
+
+    #design-intro {
+	margin-bottom: 2em;
+
+	@include small-screen-query {
+	    margin-bottom: 0;
+	}
+    }
+
     .image {
 	float: left;
 	width: 20%;
@@ -394,10 +403,11 @@ h2 {
 
     h1 {
 	text-align: center;
-	margin: 0 $section-header-spacing;
+	margin: $section-header-spacing 0;
 
 	@include small-screen-query {
  	    font-size: 1.85em;
+	    margin-top: $section-header-spacing * 5;
 	}
     }
 
@@ -434,43 +444,4 @@ h2 {
        text-align: center;
        font-size: 2em;
    }
-}
-
-a {
-    color: $primary-color;
-    text-decoration: none;
-    line-height: inherit;
-    -moz-transition: color $hover-transition;
-    -webkit-transition: color $hover-transition;
-    -o-transition: color $hover-transition;
-    -ms-transition: color $hover-transition;
-    transition: color $hover-transition;
-}
-
-a:hover, a:focus {
-    color: $blue-color;
-}
-
-p {
-    font-family: $body-font-family;
-    font-weight: 300;
-    font-size: $base-font-size;
-    line-height: 1.5;
-    margin-bottom: 1em;
-    text-align: justify;
-    strong {
-	font-weight: 700;
-    }
-}
-
-h1 {
-    font-family: $body-header-font;
-    font-size: 3em;
-}
-
-h2 {
-    font-family: $body-font-family;
-    font-weight: 300;
-    font-size: 1.6875em;
-    text-align: center;
 }
