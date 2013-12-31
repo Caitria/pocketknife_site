@@ -62,6 +62,12 @@ $large-screen-breakpoint: 1400px;
     margin: 0 auto;
 }
 
+@mixin box-shadow-mixin ($h-shadow, $v-shadow, $blur, $spread, $color) {
+    box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	-moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+}
+
 
 /* Decoration */
 
@@ -306,6 +312,20 @@ br {
     }
 }
 
+// Parse out into portfolio scss file later 
+#portfolio {
+   img {
+   	max-width: 400px;
+   	float: left;
+   	margin: 0 5% 5% 5%;
+   	@include box-shadow-mixin (0px, 0px, 10px, 1px, #ccc);
+   }
+   h2 {
+   	font-family: $body-font-family;
+   	text-align: center;
+   	font-size: 2em;
+   }
+}
 
 a {
   color: $primary-color;
