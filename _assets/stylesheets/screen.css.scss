@@ -316,15 +316,11 @@ h2 {
     .image {
 	float: left;
 	width: 20%;
-    }
-
-    .blurb {
-	margin-left: 25%;
+	margin: $padded;
     }
 
     img {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding: 20% 5%;
 	width: 80%;
     }
 
@@ -414,32 +410,6 @@ h2 {
 
 }
 
-#process {
-    .image {
-	// float: left;
-	width: 180px;
-    }
-    img {
-	padding-left: 5%;
-	padding-right: 5%;
-	height: 160px;
-    }
-    h2 {
-	text-align: left;
-    }
-}
-
-#bios {
-    img {
-	height: 160px;
-	float: right;
-	margin-left: 5%;
-	margin-right: 5%;
-    }
-    h2 {
-	text-align: left;
-    }
-}
 
 // Parse out into portfolio scss file later 
 #portfolio {
