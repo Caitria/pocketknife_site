@@ -30,7 +30,7 @@
           </div><!-- /end.logo -->
         </div><!-- /end.logo-hero -->
 
-        <div id="nav">
+        <div id="nav" role="banner">
           <ul class="no-bullet">
             <li><a href="/"> Home </a></li>
             <li><a href="/portfolio"> Portfolio</a></li>
@@ -46,7 +46,9 @@
       </div><!-- /end.left -->
 
       <div id="col-right">
-        {{ content }}
+				<main role="main">
+					{{ content }}
+				</main>
 
         <div class="footer">
           <img src={% asset_path lines3.svg %} width="100%" style="margin-top: 5%; margin-bottom: 5%;">
@@ -58,14 +60,33 @@
     </div><!-- /end.page -->
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		{% javascript fastclick.min.js %}
     <script>
-     var offsetsOffset = 20;
-     $('a').click(function(){
-       $('#col-right').animate({
-         scrollTop: $( $.attr(this, 'href') ).offset().top - offsetsOffset
-       }, 500);
-       return false;
-     });
+		 $(function() {
+		   FastClick.attach(document.body);
+
+			 // Smooth scrolling for internal page links
+			 var paddingOffset = 20,
+			     twoColCutoff = 1000,
+			     navHeight = 60;
+			 $('a').click(function(){
+				 var eltSel, offsetsOffset;
+				 if ($('body').width() > twoColCutoff) {
+					 // Two Col
+					 eltSel = '#col-right';
+					 offsetsOffset = paddingOffset;
+				 } else {
+					 // One Col
+					 eltSel = 'body';
+					 offsetsOffset = paddingOffset + navHeight;
+				 }
+				 console.log("screen: " + screen.width + ", offset: " + offsetsOffset);
+				 $(eltSel).animate({
+					 scrollTop: $($.attr(this, 'href')).offset().top - offsetsOffset
+				 }, 500);
+				 return false;
+			 });
+		 });
     </script>
     {% if page.mixpanel %}
       <script>mixpanel.track("{{ page.mixpanel }}");</script>
