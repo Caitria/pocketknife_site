@@ -65,6 +65,9 @@
        return false;
      });
     </script>
+		{% if page.mixpanel %}
+		  <script>mixpanel.track("{{ page.mixpanel }}");</script>
+		{% endif %}
 
   </body>
 </html>
