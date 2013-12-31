@@ -312,15 +312,22 @@ h2 {
 }
 
 #process {
+    text-align: center;
     .image {
-	// float: left;
-	width: 180px;
+	float: left;
+	width: 20%;
     }
+
+    .blurb {
+	margin-left: 25%;
+    }
+
     img {
 	padding-left: 5%;
 	padding-right: 5%;
-	height: 160px;
+	width: 80%;
     }
+
     h2 {
 	text-align: left;
     }
