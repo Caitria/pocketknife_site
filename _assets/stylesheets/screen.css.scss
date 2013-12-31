@@ -26,6 +26,14 @@ $h2-font-size: 1.6875em;
 $base-line-height: 150%;
 $section-header-spacing: 0.5em;
 
+/* Viewport */
+
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+
 /* Media Queries */
 
 $small-screen-breakpoint: 640px;
@@ -67,6 +75,7 @@ $large-screen-breakpoint: 1400px;
 	display: none;
     }
 }
+
 .not-small-screens {
     @include small-screen-query {
 	display: none;
