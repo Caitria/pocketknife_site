@@ -7,8 +7,8 @@
     b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
     mixpanel.init("7d2d34428bb972f3841fcedd4ff17539");</script><!-- end Mixpanel -->
 
-	<head>
-		<meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pocketknife</title>
     {% stylesheet screen %}
@@ -48,26 +48,27 @@
       <div id="col-right">
         {{ content }}
         <div class="footer">
-					<img src={% asset_path lines3.svg %} width="100%" style="margin-top: 5%; margin-bottom: 5%;" class="not-small-screens">
+          <img src={% asset_path lines3.svg %} width="100%" style="margin-top: 5%; margin-bottom: 5%;" class="not-small-screens">
             <h2>JOIN OUR <a href="http://eepurl.com/LCPeT">MAILING LIST </a></h2>
             <h2>GIVE US A <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Unico_Anello.png/200px-Unico_Anello.png">RING</a> - (650) 648-3496</h2>
             <h2>DROP US A LINE - <a href="mailto:hello@pocketknife.io?Subject=Hey%20stranger!" target="_top">hello@pocketknife.io</a>
         </div><!-- /end.footer -->
-			</div><!-- /end.col-right -->
+      </div><!-- /end.col-right -->
     </div><!-- /end.page -->
 
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script>
-		 $('a').click(function(){
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+     var offsetsOffset = 20;
+     $('a').click(function(){
        $('#col-right').animate({
-         scrollTop: $( $.attr(this, 'href') ).offset().top
+         scrollTop: $( $.attr(this, 'href') ).offset().top - offsetsOffset
        }, 500);
        return false;
      });
     </script>
-		{% if page.mixpanel %}
-		  <script>mixpanel.track("{{ page.mixpanel }}");</script>
-		{% endif %}
+    {% if page.mixpanel %}
+      <script>mixpanel.track("{{ page.mixpanel }}");</script>
+    {% endif %}
 
   </body>
 </html>

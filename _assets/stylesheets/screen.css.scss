@@ -185,6 +185,7 @@ h2 {
     @include not-large-screen-query {
 	margin: 55px auto 0 auto;
 	position: initial;
+	padding: 0;
     }
 }
 
