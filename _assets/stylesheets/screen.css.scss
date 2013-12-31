@@ -253,11 +253,6 @@ h2 {
     }
 }
 
-
-.footer {
-    	background-image: url("_assets/images/footer_image.svg");
- }
-
 #logo {
     h1 {
 	font-family: $body-accent-font;
@@ -378,6 +373,7 @@ h2 {
 
 .section {
     padding: 0 1em;
+    padding-top: 10px;
 
     @include small-screen-query {
 	padding: 0;
