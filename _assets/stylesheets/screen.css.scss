@@ -22,8 +22,17 @@ $hover-transition: 0.2s;
 
 /* Text Rendering */
 $base-font-size: 1.25em; /* 16px most browsers */
+$h2-font-size: 1.6875em;
 $base-line-height: 150%;
 $section-header-spacing: 0.5em;
+
+/* Viewport */
+
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
 
 /* Media Queries */
 
@@ -33,6 +42,12 @@ $large-screen-breakpoint: 1400px;
 
 @mixin small-screen-query {
     @include max-screen($small-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin not-small-screen-query {
+    @include min-screen($small-screen-breakpoint + 1px) {
 	@content;
     }
 }
@@ -55,6 +70,17 @@ $large-screen-breakpoint: 1400px;
     }
 }
 
+.small-screens {
+    @include not-small-screen-query {
+	display: none;
+    }
+}
+
+.not-small-screens {
+    @include small-screen-query {
+	display: none;
+    }
+}
 
 /* General Mixins */
 
@@ -81,6 +107,8 @@ video {
 
 /* Site SCSS */
 
+// General tag properties
+
 body {
     color: $body-font-color;
     font-family: $body-font-family;
@@ -89,6 +117,54 @@ body {
 br {
     height: 20px;
 }
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  line-height: inherit;
+  -moz-transition: color $hover-transition;
+  -webkit-transition: color $hover-transition;
+  -o-transition: color $hover-transition;
+  -ms-transition: color $hover-transition;
+  transition: color $hover-transition;
+}
+
+a:hover, a:focus {
+  color: $blue-color;
+}
+
+p {
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    text-align: justify;
+    strong {
+	font-weight: 700;
+    }
+}
+
+h1 {
+    font-family: $body-header-font;
+    font-size: 3em;
+}
+
+h2 {
+
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $h2-font-size;
+    text-align: center;
+
+    @include small-screen-query {
+	font-size: $h2-font-size * 0.75;
+    }
+
+}
+
+
+// Specific ids
 
 #page {
     margin: 20px;
@@ -217,12 +293,50 @@ br {
 }
 
 #social-icons {
-	text-align: right;
-	img {
-		bottom: 0; 
-		padding-left: 20px;
-		width: 60px;
+    $padding: 24px;
+
+    text-align: right;
+    img {
+	bottom: 0; 
+	margin-left: $padding;
+	width: 60px;
+
+	@include not-large-screen-query {
+	    margin: 0 $padding / 2;
 	}
+    }
+
+    @include not-large-screen-query {
+	text-align: center;
+	
+    }
+}
+
+#process {
+    .image {
+	// float: left;
+	width: 180px;
+    }
+    img {
+	padding-left: 5%;
+	padding-right: 5%;
+	height: 160px;
+    }
+    h2 {
+	text-align: left;
+    }
+}
+
+#bios {
+    img {
+	height: 160px;
+	float: right;
+	margin-left: 5%;
+	margin-right: 5%;
+    }
+    h2 {
+	text-align: left;
+    }
 }
 
 .bordered {
@@ -259,6 +373,12 @@ br {
 }
 
 .section {
+    padding: 0 1em;
+
+    @include small-screen-query {
+	padding: 0;
+    }
+
     h1 {
 	text-align: center;
 	margin: 0 $section-header-spacing;
@@ -268,21 +388,23 @@ br {
 	}
     }
 
-    h2 {
-        color: $secondary-color;
-    }
-
     h2.sub {
 	margin-top: $section-header-spacing;
     }
 
+    h2 {
+        color: $secondary-color;
+    }
+
     p {
-        padding: 0 1em;
+	padding: 0 1em;
 
 	@include small-screen-query {
 	    padding: 0;
+	    font-size: $base-font-size * 0.8;
 	}
     }
+
 }
 
 #process {
