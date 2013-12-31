@@ -133,10 +133,13 @@ a:hover, a:focus {
   color: $blue-color;
 }
 
-p {
+p, li {
     font-family: $body-font-family;
     font-weight: 300;
     font-size: $base-font-size;
+}
+
+p {
     line-height: 1.5;
     margin-bottom: 1em;
     text-align: justify;
@@ -278,12 +281,13 @@ h2 {
     border-top-style: solid;
     border-width: 1px;
     padding: 5px 0 5px 0;
+
     p {
 	text-align: center;
 	font-size: 1.1em;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: .55;
-	margin-top: 10px;
+	margin-top: 12px;
     }
 }
 
@@ -331,13 +335,18 @@ h2 {
 
 #bios {
     img {
-	height: 160px;
+	width: 24%;
 	float: right;
 	margin-left: 5%;
 	margin-right: 5%;
     }
+
     h2 {
 	text-align: left;
+    }
+
+    ul {
+	text-align: right;
     }
 }
 
@@ -399,7 +408,7 @@ h2 {
         color: $secondary-color;
     }
 
-    p {
+    p, li {
 	padding: 0 1em;
 
 	@include small-screen-query {
@@ -420,25 +429,25 @@ h2 {
    	@include box-shadow-mixin (0px, 0px, 10px, 1px, #ccc);
    }
    h2 {
-   	font-family: $body-font-family;
-   	text-align: center;
-   	font-size: 2em;
+       font-family: $body-font-family;
+       text-align: center;
+       font-size: 2em;
    }
 }
 
 a {
-  color: $primary-color;
-  text-decoration: none;
-  line-height: inherit;
-  -moz-transition: color $hover-transition;
-  -webkit-transition: color $hover-transition;
-  -o-transition: color $hover-transition;
-  -ms-transition: color $hover-transition;
-  transition: color $hover-transition;
+    color: $primary-color;
+    text-decoration: none;
+    line-height: inherit;
+    -moz-transition: color $hover-transition;
+    -webkit-transition: color $hover-transition;
+    -o-transition: color $hover-transition;
+    -ms-transition: color $hover-transition;
+    transition: color $hover-transition;
 }
 
 a:hover, a:focus {
-  color: $blue-color;
+    color: $blue-color;
 }
 
 p {
