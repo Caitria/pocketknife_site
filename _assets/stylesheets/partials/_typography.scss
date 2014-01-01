@@ -1,0 +1,49 @@
+
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  line-height: inherit;
+  -moz-transition: color $hover-transition;
+  -webkit-transition: color $hover-transition;
+  -o-transition: color $hover-transition;
+  -ms-transition: color $hover-transition;
+  transition: color $hover-transition;
+}
+
+a:hover, a:focus {
+  color: $blue-color;
+}
+
+p, li {
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $base-font-size;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+    text-align: justify;
+    strong {
+	font-weight: 700;
+    }
+}
+
+h1 {
+    font-family: $body-header-font;
+    font-size: 3em;
+}
+
+h2 {
+
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $h2-font-size;
+    text-align: center;
+
+    @include small-screen-query {
+	font-size: $h2-font-size * 0.75;
+    }
+
+}

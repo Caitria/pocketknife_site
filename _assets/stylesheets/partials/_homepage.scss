@@ -1,0 +1,47 @@
+/* Homepage IDs */
+
+#process {
+    text-align: center;
+
+    #design-intro {
+	margin-bottom: 2em;
+
+	@include small-screen-query {
+	    margin-bottom: 0;
+	}
+    }
+
+    .image {
+	float: left;
+	width: 20%;
+	margin: $padded;
+    }
+
+    img {
+	padding: 20% 5%;
+	width: 80%;
+	max-width: 140px;
+    }
+
+    h2 {
+	text-align: left;
+    }
+}
+
+#bios {
+    img {
+	width: 24%;
+	max-width: 200px;
+	float: right;
+	margin-left: 5%;
+	margin-right: 5%;
+    }
+
+    h2 {
+	text-align: left;
+    }
+
+    ul {
+	text-align: right;
+    }
+}

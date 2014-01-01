@@ -1,0 +1,63 @@
+/* pocketknife media query custom */
+
+/*@viewport{
+    zoom: 1.0;
+    width: device-width;
+}*/
+
+
+@import "mixins/_media-queries";
+
+
+$small-screen-breakpoint: 640px;
+$medium-screen-breakpoint: 1000px;
+$large-screen-breakpoint: 1400px;
+
+
+@mixin small-screen-query {
+    @include max-screen($small-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin not-small-screen-query {
+    @include min-screen($small-screen-breakpoint + 1px) {
+	@content;
+    }
+}
+
+@mixin medium-screen-query {
+    @include screen($small-screen-breakpoint + 1px, $medium-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin large-screen-query {
+    @include min-screen($medium-screen-breakpoint + 1px) {
+	@content;
+    }
+}
+
+@mixin not-large-screen-query {
+    @include max-screen($medium-screen-breakpoint) {
+	@content;
+    }
+}
+
+@mixin oversized-screen-query {
+    @include min-screen($large-screen-breakpoint + 1px) {
+	@content;
+    }
+}
+
+.small-screens {
+    @include not-small-screen-query {
+	display: none;
+    }
+}
+
+.not-small-screens {
+    @include small-screen-query {
+	display: none;
+    }
+}
