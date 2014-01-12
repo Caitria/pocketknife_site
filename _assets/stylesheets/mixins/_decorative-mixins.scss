@@ -6,6 +6,14 @@
 
 @mixin box-shadow-mixin ($h-shadow, $v-shadow, $blur, $spread, $color) {
     box-shadow: $h-shadow $v-shadow $blur $spread $color;
-	-webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
-	-moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+}
+
+@mixin transition-mixin ($property, $duration) {
+    -moz-transition: $property $duration;
+    -webkit-transition: $property $duration;
+    -o-transition: $property $duration;
+    -ms-transition: $property $duration;
+    transition: $property $duration;
 }

@@ -1,5 +1,7 @@
 /* body template styling */
 
+@import "../variables/_global-variables";
+
 img,
 embed,
 object,
@@ -134,6 +136,7 @@ br {
 
 #logo-image {
     width: 200px;
+    margin-bottom: 0.5em;
 }
 
 #logo-footer {
@@ -157,9 +160,16 @@ br {
 
 #social-icons {
     $padding: 24px;
+    color: $secondary-color;
 
     text-align: right;
+
     img {
+	text-decoration: none;
+	line-height: inherit;
+
+	@include transition-mixin(background-color, $hover-transition);
+
 	bottom: 0; 
 	margin-left: $padding;
 	width: 60px;
@@ -167,6 +177,10 @@ br {
 	@include not-large-screen-query {
 	    margin: 0 $padding / 2;
 	}
+    }
+
+    img:hover {
+	background-color: $blue-color;
     }
 
     @include not-large-screen-query {

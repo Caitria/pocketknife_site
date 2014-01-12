@@ -1,14 +1,10 @@
-
+@import "../variables/_global-variables";
 
 a {
   color: $primary-color;
   text-decoration: none;
   line-height: inherit;
-  -moz-transition: color $hover-transition;
-  -webkit-transition: color $hover-transition;
-  -o-transition: color $hover-transition;
-  -ms-transition: color $hover-transition;
-  transition: color $hover-transition;
+  @include transition-mixin(background-color, $hover-transition);
 }
 
 a:hover, a:focus {

@@ -1,5 +1,6 @@
 /* common page layout elements */ 
 
+@import "../variables/global-variables";
 
 .bordered {
     border-style: solid;
@@ -68,5 +69,4 @@
 	    font-size: $base-font-size * 0.8;
 	}
     }
-
 }
