@@ -2,7 +2,7 @@
 layout: post
 title: "Caitria Hosts Stanford's #dchat"
 description: ""
-tags: []
+tags: [events, dschool]
 published: true
 ---
 

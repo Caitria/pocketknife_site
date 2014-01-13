@@ -2,7 +2,7 @@
 layout: post
 title: "Understanding (and talking to) humans"
 description: ""
-tags: []
+tags: [method, user-research]
 published: true
 ---
 
