@@ -1,28 +1,49 @@
+/* the blahgs */
 
+#blog {
 
-#blog-list {
-    h1 {
-		font-weight: 500;
-		text-align: center;
-
-    }
-    h3 {
+    h3, h4, h5 {
     	font-family: $body-header-font;
+    }
+
+    h2 {
+	font-family: $body-font-family;
+	text-align: left;
+
+	@include large-screen-query {
+	    font-size: 3em;
+	    font-weight: 500;
+	}
+    }
+
+    li {
+	line-height: 1.5em;
+    }
+    
+    /*
+    h1 {
+	font-weight: 500;
+	text-align: center;
+    }
+
+    h2 {
+    	font-family: $body-font;
+	font-size: 3em;
+	font-weight: 500;
+	text-align: left;
+    }
+
+    h3 {
     	font-size: 1.5em;
     }
+
     h4 {
-    	font-family: $body-font-family;
     	font-weight: 500;
     }
+
     h5 {
-    	font-family: $body-header-font;
     	text-align: right;
     	font-size: 1.5em;
     }
-    h2 {
-		font-family: $body-font-family;
-	    font-size: 3em;
-	    font-weight: 500;
-	    text-align: left;
-    }
+    */
 }

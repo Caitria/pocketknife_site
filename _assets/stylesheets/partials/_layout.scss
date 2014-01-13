@@ -64,6 +64,9 @@
     p, li {
 	padding: 0 1em;
 
+	-webkit-hyphens: auto;
+	hyphens: auto;
+
 	@include small-screen-query {
 	    padding: 0;
 	    font-size: $base-font-size * 0.8;

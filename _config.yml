@@ -1,6 +1,7 @@
 name: Pocketknife
 markdown: redcarpet
 pygments: true
+excerpt_separator: <!--more-->
 exclude: [Gemfile, Gemfile.lock, readme.markdown, s3_website.yml]
 assets:
   css_compressor: sass

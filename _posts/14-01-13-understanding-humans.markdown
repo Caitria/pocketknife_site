@@ -6,19 +6,24 @@ tags: []
 published: true
 ---
 
+
 ### How conversations lead to product
+
 [<img src="{% asset_path observation.png %}" style="float:left; margin-bottom: 25px">](http://www.youtube.com/watch?v=OITJxh51z3Q)
+
 People are complex, twisty and counterintuitive. That's what makes dates interesting and design fun. In this post I'll share three tools you can use to better understand your users. 
+
+<!--more-->
 
 First a note on when to dive into 'empathic research.' Open-ended and [generative research](http://johnnyholland.org/2012/03/finding-empathy-through-generative-research/) is fantastic when you've got a big question or you are looking for a game changing idea. If you're just trying to decide between red and blue for a button on your website, I'll write a post for you later.
 
-## Method 1. - Immerse
+## Method 1. Immerse
 <img src="{% asset_path chaplin.jpg %}" style="float:right; padding-left: 15px; margin-bottom: 15px;" width="400px">
 Go out and experience the product or service you're trying to transform. If you're trying to make an app to help seniors order perscriptions, go try to fill a subscription physically. Sometimes you'll find that the experience instructive. Sometimes you'll find that the experience isn't broken enough to gain users with a slightly better solution. 
 
 [Here's a great example](http://learningactivist.com/2013/06/28/insight-through-design-thinking-immersion/) of learning about users through immersion by Mark Burgess. He broke dress code as a school employee in order to experience, to some degree, the reactions and emotions students experienced when doing the same thing. 
 
-##Method 2. - Observe
+##Method 2. Observe
 <img src="{% asset_path observe.jpg %}" style="float:right; padding-left: 15px; margin-bottom: 15px;" width="400px">Observation is easy - actively watch your user and take notes. As an observer you can record a lot of objective information, and begin to make infer subjective motivations or emotions. You can observe your users completing the task you're trying to facilitate, or doing something unrelated that they love. You're just trying to understand a little bit more about how people tick, and explore potential areas for innovation.
 
 I'll use the picture above to highlight the process. Ask yourself:
@@ -29,7 +34,7 @@ I'll use the picture above to highlight the process. Ask yourself:
 
 *Please note!* The man in the photograph is not in the least put off by the slighty creepy observer behind him. Don't worry about being caught staring or asking if you can observe. People are generally extremely  nice. 
 
-##Method 3. - For Pete's sake, just talk to somebody
+##Method 3. For Pete's sake, just talk to somebody
 
 <img src="{% asset_path interview.jpg %}" style="float:right; padding-left: 15px; margin-bottom: 15px;" width="400px">
 
