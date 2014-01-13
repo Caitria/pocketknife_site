@@ -14,7 +14,7 @@ First a note on when to dive into 'empathic research.' Open-ended and [generativ
 
 ## Method 1. - Immerse
 <img src="{% asset_path chaplin.jpg %}" style="float:right; padding-left: 15px; margin-bottom: 15px;" width="400px">
-Go out and experience the product or service you're trying to transform. If you're trying to make an app to help seniors order perscriptions, go try to fill a subscription physically. Sometimes you'll find that the experience in instructive. Sometimes you'll find that the experience isn't broken enough to gain users with a slightly better solution. 
+Go out and experience the product or service you're trying to transform. If you're trying to make an app to help seniors order perscriptions, go try to fill a subscription physically. Sometimes you'll find that the experience instructive. Sometimes you'll find that the experience isn't broken enough to gain users with a slightly better solution. 
 
 [Here's a great example](http://learningactivist.com/2013/06/28/insight-through-design-thinking-immersion/) of learning about users through immersion by Mark Burgess. He broke dress code as a school employee in order to experience, to some degree, the reactions and emotions students experienced when doing the same thing. 
 

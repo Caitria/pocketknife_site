@@ -8,7 +8,7 @@ published: true
 
 ###What is human-centered design?
 <img src="{% asset_path postit.jpg %}" style="float:left; margin-bottom: 25px">
-Trick question. User-centered' or 'human-centered' design is exactly what it sounds like. At Pocketknife, we base product and service decisions upon user emotions and motivations. 
+Trick question. 'User-centered' or 'human-centered' design is exactly what it sounds like. At Pocketknife, we base product and service decisions upon user emotions and motivations. 
 
 Consider the following (hypothetical): 
 
