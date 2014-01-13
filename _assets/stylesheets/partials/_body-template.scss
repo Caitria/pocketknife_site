@@ -74,6 +74,12 @@ br {
 
 	}
     }
+
+    @include small-screen-query {
+	ul {
+	    font-size: 1em;
+	}
+    }
     
     @include large-screen-query {
 	margin-top: 40px;
