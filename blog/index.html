@@ -6,7 +6,7 @@ mixpanel: blog
 <!-- -*- tab-width: 2 -*- -->
 
 <div id="blog">
-    <div class="hfeed section" style="padding-left: 0px;">
+    <div class="hfeed section" style="padding-left: 0px; padding-bottom: 50px">
 	    {% for post in site.posts %}
 	        <article class="hentry entry">
 	            <p class="meta">Posted on <span class="published">{{ post.date | date_to_string }}</span></p>
@@ -16,9 +16,7 @@ mixpanel: blog
 	            <p>{{ post.excerpt }}</p>
 	            <a href="{{ post.url }}" rel="bookmark"><h5>Read More...</h5></a>
 	        </article>
-	        <br>
 	    {% endfor %}
-
     </div><!-- /end.hfeed -->
 </div><!-- /end.blog-list -->
 
