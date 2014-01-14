@@ -1,14 +1,25 @@
 /* the blahgs */
 
 #blog {
-
+    .meta {
+        padding-left: 0px;
+        margin-top: 0px;
+    }
     h3, h4, h5 {
     	font-family: $body-header-font;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     h2 {
 	font-family: $body-font-family;
 	text-align: left;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+
+    p {
+        margin-bottom: 5px; 
+    }
 
 	@include large-screen-query {
 	    font-size: 3em;
@@ -18,6 +29,10 @@
 
     li {
 	line-height: 1.5em;
+    }
+
+    article {
+        padding-bottom: 65px;
     }
     
     /*
