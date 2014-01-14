@@ -4,6 +4,7 @@ title: "Understanding (and talking to) humans"
 description: ""
 tags: [method, user-research]
 published: true
+mixpanel: understanding_humans
 ---
 
 

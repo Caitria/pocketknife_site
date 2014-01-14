@@ -4,6 +4,7 @@ title: "Welcome to Design"
 description: ""
 tags: [user-research]
 published: true
+mixpanel: welcome_to_design
 ---
 
 ### What is human-centered design?

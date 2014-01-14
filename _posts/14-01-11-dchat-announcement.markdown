@@ -4,6 +4,7 @@ title: "Caitria Hosts Stanford's #dchat"
 description: ""
 tags: [events, dschool]
 published: true
+mixpanel: caitria_dchat
 ---
 
 ### Twitter chat on all things d, Tuesday 1/14, 6pm
