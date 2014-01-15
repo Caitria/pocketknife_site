@@ -8,7 +8,9 @@ published: true
 
 
 ###Using my designer's toolkit at home
-<img src="{% asset_path ustwo.png %}" style="float:left; margin-bottom: 25px">
+
+<img src="{% asset_path ustwo.png %}" class="banner">
+
 When you 'do design', it comes home with you. Crumpled up post-its fall out of your pockets, your kitchen table is crowded with user research, you read books on typography in the bath. Human centered design, to me, is a set of problem solving tools. I've not only brought them home, I've turned them on myself, because I think design is for lovers. 
 
 <!--more-->
