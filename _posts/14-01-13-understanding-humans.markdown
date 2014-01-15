@@ -10,7 +10,7 @@ mixpanel: understanding_humans
 
 ### How conversations lead to product
 
-[<img src="{% asset_path observation.png %}" style="float:left; margin-bottom: 25px">](http://www.youtube.com/watch?v=OITJxh51z3Q)
+[<img src="{% asset_path observation.png %}" class="banner">](http://www.youtube.com/watch?v=OITJxh51z3Q)
 
 People are complex, twisty and counterintuitive. That's what makes dates interesting and design fun. In this post I'll share three tools you can use to better understand your users. 
 

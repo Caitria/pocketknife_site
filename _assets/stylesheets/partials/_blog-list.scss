@@ -34,31 +34,16 @@
     article {
         padding-bottom: 65px;
     }
-    
-    /*
-    h1 {
-	font-weight: 500;
-	text-align: center;
+
+    img .banner {
+	width: 100%;
+	float: left;
+	margin-bottom: 25px;
     }
 
-    h2 {
-    	font-family: $body-font;
-	font-size: 3em;
-	font-weight: 500;
-	text-align: left;
+    img {
+	@include small-screen-query {
+	    width: 100%;
+	}
     }
-
-    h3 {
-    	font-size: 1.5em;
-    }
-
-    h4 {
-    	font-weight: 500;
-    }
-
-    h5 {
-    	text-align: right;
-    	font-size: 1.5em;
-    }
-    */
 }

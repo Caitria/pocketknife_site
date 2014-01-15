@@ -9,7 +9,7 @@ mixpanel: caitria_dchat
 
 ### Twitter chat on all things d, Tuesday 1/14, 6pm
 
-<img src="{% asset_path berry.jpg %}" style="float:left; margin-bottom: 25px">
+<img src="{% asset_path berry.jpg %}" class="banner">
 
 Pocketknife designer/mountaineer Caitria will be hosting [next week's #dchat](http://dschool.stanford.edu/fellowships/2014/01/10/design-disasters-caitria-on-dchat/) at the Stanford Hasso Plattner Institute of Design (the d.school) on Tuesday 1/14 from 6-7pm. Topic: Design & Disasters.
 
