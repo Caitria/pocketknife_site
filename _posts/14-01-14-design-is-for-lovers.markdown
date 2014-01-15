@@ -4,6 +4,7 @@ title: "Design Is For Lovers"
 description: ""
 tags: [life, user-research]
 published: true
+mixpanel: design_for_lovers
 ---
 
 
