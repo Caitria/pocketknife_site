@@ -41,8 +41,27 @@
 	margin-bottom: 25px;
     }
 
+    img.half-left {
+	@include not-small-screen-query {
+	    width: 50%;
+	    max-width: 100%;
+	    float: left;
+	    margin-right: 0.5em;
+	}
+    }
+
+    img.half-right {
+	@include not-small-screen-query {
+	    width: 50%;
+	    max-width: 100%;
+	    float: right;
+	    margin-left: 0.5em;
+	}
+    }
+
     img {
 	@include small-screen-query {
+	    margin: 0;
 	    width: 100%;
 	}
     }

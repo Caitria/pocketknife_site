@@ -21,7 +21,7 @@ Ah, relationships are disorienting and wonderful - they are a knotted bundle of 
 
 To me, design isn't about 'fixing', or 'studying' your guy or gal, just as design isn't about fixing or studying your users. It is about intentionality, empathy and respect. It is about having a suggestion for moving forward when you're stuck on something. Why shouldn't we take the [marvelous toolkit](http://dschool.stanford.edu/wp-content/uploads/2011/03/BootcampBootleg2010v2SLIM.pdf) that we use professionally and make our lives better? 
 
-<img src="{% asset_path t1.png %}" style="float:left; margin-bottom: 25px">
+<img src="{% asset_path t1.png %}" class="half-right">
 
 I'll admit, both working with the man I love and applying design to our relationship is really flipping scary at times. Last night we went out on a limb and tried an exercise that teams do at the d.school quite often. We both came up with "I like" and "I wish" statements about our work together. The results were fantastic, actionable, and fixable. 
 
