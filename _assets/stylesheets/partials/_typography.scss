@@ -4,7 +4,7 @@ a {
   color: $primary-color;
   text-decoration: none;
   line-height: inherit;
-  @include transition-mixin(background-color, $hover-transition);
+  @include transition-mixin(color, $hover-transition);
 }
 
 a:hover, a:focus {

@@ -73,6 +73,7 @@ br {
 	    padding: 15px;
 
 	}
+
     }
 
     @include small-screen-query {
@@ -80,7 +81,7 @@ br {
 	    font-size: 1em;
 	}
     }
-    
+
     @include large-screen-query {
 	margin-top: 40px;
 	ul {
@@ -173,10 +174,11 @@ br {
     img {
 	text-decoration: none;
 	line-height: inherit;
+	opacity: 0.4;
 
-	@include transition-mixin(background-color, $hover-transition);
+	@include transition-mixin(opacity, 0.5s);
 
-	bottom: 0; 
+	bottom: 0;
 	margin-left: $padding;
 	width: 60px;
 
@@ -186,12 +188,10 @@ br {
     }
 
     img:hover {
-	background-color: $blue-color;
+	opacity: 1.0;
     }
 
     @include not-large-screen-query {
 	text-align: center;
-	
     }
 }
-
