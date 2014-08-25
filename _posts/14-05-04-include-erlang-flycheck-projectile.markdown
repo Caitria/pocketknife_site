@@ -47,7 +47,7 @@ using the definitions in `:error-patterns`. I <3 flycheck.
 
 For Erlang, the command is just `erlc`:
 
-    erlc -o {{{{temporary-directory}}} -Wall \{\{source\}\}
+    erlc -o ${temporary-directory} -Wall ${source}
 
 > note: I mustachified the command because it makes it more
 > readable. I might be wrong.
@@ -55,9 +55,10 @@ For Erlang, the command is just `erlc`:
 This runs the compiler, sending the output to a `temporary-directory`
 which `flycheck` will be kind enough to create, and using the
 `source`, which is the file currently being edited. To add an include
-file search directory, `erlc` accepts the `-I` flag.  This'll give us:
+file search directory, `erlc` accepts the `-I` flag.  This'll give us
+a command of:
 
-    erlc -I ../include -o \{\{temporary-directory\}\} -Wall \{\{source\}\}
+    erlc -I ../include -o ${temporary-directory} -Wall ${source}
 
 But, this is brittle: it only works for files in folders that are at
 the level of `include`. bbatsov's always excellent
